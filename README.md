@@ -25,15 +25,15 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-<h4>- Step 1:<h4><br>
-  Create a Resource Group in Microsoft Azure, 1 Virtual Machine for Microsoft Windows, 1 Virtual Machine for Linux Ubuntu 
-<h4>- Step 2:<h4><br>
+<h4>- Step 1:</h4>
+  Create a Resource Group in Microsoft Azure, 1 Virtual Machine for Microsoft Windows, 1 Virtual Machine for Linux Ubuntu
+<h4>- Step 2:</h4>
   Connect the Micrsoft Windows VM via Remote Desktop Connection
-<h4>- Step 3:<h4><br>
+<h4>- Step 3:</h4>
   Download and Install Wireshark through the Windows VM
-<h4>- Step 4:<h4><br>
+<h4>- Step 4:</h4>
   Open the command line in Windows (Powershell) and ping/connect to Linux Ubuntu VM
-<h4>- Step 5:<h4><br>
+<h4>- Step 5:</h4>
   Open Wireshark and test out various networking protocols (SSH, RDP, DNS, HTTP/S, ICMP)
 
 <h2>Actions and Observations</h2>
