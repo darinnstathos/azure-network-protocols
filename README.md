@@ -105,7 +105,10 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <strong>What is Wireshark and why is it useful?</strong>
 <p>Wireshark is a protocol analyzer, meaning it captures and analyzes network traffic in real-time. It helps in understanding and diagnosing network-related issues by giving detailed insights/information into the communication happening between devices on the network. Since you can peak into all the traffic coming through, it's useful in identifying problems, troubleshooting network performance, and detecting security vulnerabilities.</p>
 
+1. Inside of our Microsoft Windows VM, navigate to 'Microsoft Edge > Search 'Download Wireshark'
 
+<p>The link is also here: a href="https://www.wireshark.org/download.html"</p>
+  
 
 
 
