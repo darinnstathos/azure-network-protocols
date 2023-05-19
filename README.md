@@ -289,8 +289,14 @@ We're going to use the Microsoft Windows VM command-line to find IP addresses of
 
 <strong>What is RDP Protocol?</strong>
 
-<p>
-  
+<p>RDP (Remote Desktop Protocol) is a technology that allows you to remotely access and control a computer or server from a different location. It enables you to see and interact with a remote computer's desktop as if you were sitting in front of it. RDP is commonly used for remote administration, remote support, and accessing resources on a remote computer securely and conveniently.</p>
+
+1. Inside Microsoft Windows VM, navigate to Wireshark > filter by "tcp.port == 3389" in the search bar (TCP Port 3389 is the port using for Remote Desktop Protocol) > press "Enter" key
+2. We can see that it’s already spamming traffic within Wireshark because we are currently using RDP since our physical machine is utilizing Remote Desktop Connection to operate our Virtual Machine 
+
+
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 
