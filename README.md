@@ -58,44 +58,29 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <h4>Creating our Linux Ubuntu Virtual Machine</h4>
+
 1. Azure > naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
 2. Next to 'Resource Group', we want the Resource Group created previously: "RG-NSGP"
 3. VM Name: 'VM2-Linux', Operating System Image: 'Ubuntu Server 20.04 LTS -x64 Gen2', Size: 2vcpu
 4. Under ‘Administrator Account’, instead of selecting ‘SSH’, we want to select ‘Password’ and create a username and password again. This username and password will be necessary when we access this Linux command line from our Windows VM
 5. We’ll forward from ‘Next: Disks >’ and then to ‘Next: Networking >’: 
 
-We can see that we have the same virtual network as our Microsoft Windows VM. Again, this allows for our Virtual Machines to better communicate with one another as they are now on the same network
+<p>We can see that we have the same virtual network as our Microsoft Windows VM. Again, this allows for our Virtual Machines to better communicate with one another as they are now on the same network</P>
+
 6. There is nothing left to alter so we will select ‘Review + Create’ and ‘Create’
 
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<br>
+
+<h3>Step 2: Connect to the Microsoft Windows VM via Remote Desktop Connection</h3>
+
+<p>Both our Windows and Linux Virtual Machines have been created. Now, it’s time to connect to our Windows Virtual Machine using Remote Desktop Connection and hop inside. We want to be able to access our Microsoft Operating System so that we can start observing Network Protocols.</p>
 
 
 
 
 
 
-
-
-
-
-
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
