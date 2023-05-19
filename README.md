@@ -239,7 +239,26 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 <br>
 
-<h4>DHCP Protocol</h4>
+<h4>DHCP Protocol:</h4>
+<strong>What is DHCP protocol?</strong>
+<p>DHCP (Dynamic Host Configuration Protocol) is a network protocol that automatically assigns IP addresses to devices on a network. It is important because it simplifies the process of connecting devices to a network by eliminating the need for manual IP address configuration. DHCP ensures that devices can easily join a network and communicate with other devices without conflicts, making network setup and management more efficient and convenient.</p>
+
+<p>What we're going to do right now is request a new IP address from the DHCP server installed within Microsoft Azure and observe the traffic that happens on Wireshark:</p>
+
+1. Within Microsoft Windows VM > open 'Wireshark' > filter by 'DHCP' in the search bar on top > press "Enter" key
+2. In the command-line (Powershell) we will type “ipconfig /renew” 
+
+<p>In simple terms, the command "ipconfig /renew" is like asking the network to give your device a new address. It tells your computer to request a fresh IP address from the DHCP server, which is responsible for assigning IP addresses on the network. This command is useful when you want to refresh your network connection or resolve connectivity issues by obtaining a new IP address.</p>
+
+<p>**Side note: We may temporarily lose connection to our VM as we are assigned a new IP address from the DHCP server</p>
+
+3. We can see on Wireshark that some traffic was generated once we requested a new IP address
+
+[[XXX: NEED TO TAKE SCREENSHOT OF THIS CONNECTION __ DONT HAVE A PICTURE YET. NEED TO LOOK AT VIDEO TO SEE IF THEY GOT A NEW IP SHOWN UP ON THEIR WIRESHARK AND MATCHES COMMAND_LINE]]
+
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
   
 
 
