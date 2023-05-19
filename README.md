@@ -240,7 +240,9 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 <br>
 
 <h4>DHCP Protocol:</h4>
+
 <strong>What is DHCP protocol?</strong>
+
 <p>DHCP (Dynamic Host Configuration Protocol) is a network protocol that automatically assigns IP addresses to devices on a network. It is important because it simplifies the process of connecting devices to a network by eliminating the need for manual IP address configuration. DHCP ensures that devices can easily join a network and communicate with other devices without conflicts, making network setup and management more efficient and convenient.</p>
 
 <p>What we're going to do right now is request a new IP address from the DHCP server installed within Microsoft Azure and observe the traffic that happens on Wireshark:</p>
@@ -259,6 +261,35 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<br>
+
+<h4>DNS Protocol:</h4>
+
+<strong>What is DNS protocol?</strong>
+
+<p>DNS (Domain Name System) is a protocol that translates human-readable domain names, such as www.example.com, into IP addresses, which are the numerical addresses used by computers to identify each other on a network. The DNS protocol is responsible for resolving domain names to their corresponding IP addresses and vice versa. The DNS protocol plays a crucial role in enabling the internet to function by providing a distributed and hierarchical system for domain name resolution. It helps users access websites and other network resources using familiar domain names, without needing to remember and enter the underlying IP addresses.</p>
+
+We're going to use the Microsoft Windows VM command-line to find IP addresses of popular sites on the internet and witness the traffic it generates on Wireshark:
+
+1. Inside Microsoft Windows VM, navigate to Wireshark > filter by "DNS" or "tcp.port == 53" in the search bar > press "Enter" key
+2. In the command-line (Powershell), type “nslookup www.google.com”
+
+<p>The "nslookup" command is like a detective tool for finding information about domain names and IP addresses. When you use the "nslookup" command and provide a domain name or IP address, it helps you discover details like the corresponding IP address, domain name ownership, and DNS configurations. It's a useful tool for troubleshooting network issues and checking the status of DNS servers.</p>
+
+3. Within the command-line, we are given Google's IP address and within Wireshark, we see an external IP address communicating with our virtual machine 
+
+[[XXX: NEED TO TAKE SCREENSHOT OF THIS CONNECTION __ DONT HAVE A PICTURE YET. NEED TO LOOK AT VIDEO TO SEE IF THEY GOT A NEW IP SHOWN UP ON THEIR WIRESHARK AND MATCHES COMMAND_LINE]]
+
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
+
+<h4>RDP Protocol:</h4>
+
+<strong>What is RDP Protocol?</strong>
+
+<p>
   
 
 
