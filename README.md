@@ -107,7 +107,35 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 1. Inside of our Microsoft Windows VM, navigate to 'Microsoft Edge > Search 'Download Wireshark'
 
-<p>The link is also here: <a href="https://www.wireshark.org/download.html"></p>
+<p>The link is also here:https://www.wireshark.org/download.html</p>
+
+2. We want to download Wireshark for Windows Installer 64-bit since that is the current operating system we are using
+3. Once downloaded, you can access Wireshark via the top right hand corner by double-clicking ‘Open file’ or clicking ‘File Explorer’ at the bottom of the screen and navigating to ‘Downloads’
+4. The App Installer for Wireshark will open. Keep selecting ‘Next’, ‘Noted’, ‘Install’, and ‘Finish’. We will install Wireshark with all of its default settings. There is nothing we need to alter with the application. Agree to all terms.
+5. Navigate to the search bar on Windows Desktop and type ‘Wireshark’ > Open the application
+6. Select ‘Ethernet’ > Click the blue icon shark fin in the top left-hand in order to start capturing packets
+
+<p>We are now inside of Wireshark inside of our Windows Virtual Machine. Wireshark is capturing and displaying data packets. It seems like it’s spamming right now, but it’s essentially showing everything that’s going on with our computer behind the scenes. 
+
+We will now filter and observe various different network protocols and connect to our Linux Virtual Machine.</p>
+
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
+
+<h3>Observe ICMP Protocol & Connect to Linux Virtual Machine</h3>
+
+<h4>Part 1: [xxxx]</h4>
+
+<Strong>What is ICMP?</strong>
+<p>Inside of Wireshark, we will filter by ICMP. ICMP (Internet Control Message Protocol) is a network protocol that allows devices on a network to send control and error messages to each other. It is primarily used for diagnostic and troubleshooting purposes. ICMP messages include things like ping requests and error notifications, helping to check if a device is reachable, measure network latency, and identify network issues such as unreachable hosts or congested connections. Essentially, ICMP is like a messaging system that helps devices communicate about network conditions and status.</p>
+
+
+
+
   
 
 
