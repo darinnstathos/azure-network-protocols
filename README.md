@@ -79,6 +79,31 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>Both our Windows and Linux Virtual Machines have been created. Now, it’s time to connect to our Windows Virtual Machine using Remote Desktop Connection and hop inside. We want to be able to access our Microsoft Operating System so that we can start observing Network Protocols.</p>
 
+<Strong>What are Public IP Addresses?</Strong>
+<p>We are going to be copying the Public IP Addresses of our Virtual Machines in order to get inside of them. Public IP addresses, in simple terms, are unique numerical identifiers assigned to devices connected to the internet. They allow devices to communicate with other devices and services on the internet. Just like a home address helps identify where you live, a public IP address helps identify and locate devices, such as computers or routers, on the internet, enabling them to send and receive data across the global network.</p>
+
+1. Within Azure > Select 'Virtual Machines' > Select 'VM1-Windows' > Copy the Public IP Address
+2. Those with Microsoft Windows on their physical machine, navigate to search bar on desktop and type 'Remote Desktop Connection'. Those with MacOS on their physical machine, navigate to the App Store & download 'Microsoft Remote Desktop'
+
+<p>(I'm personally using MacOS so the following images will be taken from that perspective. However, the process for Microsoft Users is the same.)</P.
+
+3. Open 'Microsoft Remote Desktop' > Click 'Add PC'
+4. Under PC Name: paste the Public IP address 
+5. Double Click the recently added VM and sign in using the username/password created in Step 1
+6. Press ‘continue’ until you reach the ‘Welcome’ screen for WindowOS
+
+<p>We are now inside of our Windows Virtual Machine. The next step is to download/install Wireshark inside of our Windows Virtual Machine so that we can now finally observe Network Security Groups and Networking Protocols working in real time.</p>
+
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
+
+<h3>Download and Install Wireshark through Windows VM</h3>
+
+<strong>What is Wireshark and why is it useful?</strong>
+<p>Wireshark is a protocol analyzer, meaning it captures and analyzes network traffic in real-time. It helps in understanding and diagnosing network-related issues by giving detailed insights/information into the communication happening between devices on the network. Since you can peak into all the traffic coming through, it's useful in identifying problems, troubleshooting network performance, and detecting security vulnerabilities.</p>
 
 
 
