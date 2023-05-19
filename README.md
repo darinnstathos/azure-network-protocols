@@ -107,7 +107,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 1. Inside of our Microsoft Windows VM, navigate to 'Microsoft Edge > Search 'Download Wireshark'
 
-<p>The link is also here: a href="https://www.wireshark.org/download.html"</p>
+<p>The link is also here: <a href="https://www.wireshark.org/download.html"></p>
   
 
 
