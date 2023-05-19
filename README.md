@@ -29,7 +29,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Actions and Observations</h2>
 
-<h3>Create Resource Group and Virtual Machines: Windows & Linux</h3>
+<h3>Step 1: Create Resource Group and Virtual Machines: Windows & Linux</h3>
 
 <Strong>What are Resource Groups?</strong>
 <p>Resource groups in Microsoft Azure are containers that help manage and organize related Azure resources. They provide a logical grouping for resources, such as virtual machines, storage accounts, and networks, allowing administrators to manage, monitor, and apply policies to the resources collectively.</p>
@@ -132,6 +132,16 @@ We will now filter and observe various different network protocols and connect t
 
 <Strong>What is ICMP?</strong>
 <p>Inside of Wireshark, we will filter by ICMP. ICMP (Internet Control Message Protocol) is a network protocol that allows devices on a network to send control and error messages to each other. It is primarily used for diagnostic and troubleshooting purposes. ICMP messages include things like ping requests and error notifications, helping to check if a device is reachable, measure network latency, and identify network issues such as unreachable hosts or congested connections. Essentially, ICMP is like a messaging system that helps devices communicate about network conditions and status.</p>
+
+1. Inside Wireshark, we can filter by ICMP by navigating to the search by at the top section, typing ‘ICMP’, and hitting the ‘Enter’ key
+2. The screen should clear as we are now only observing ICMP traffic. We will create some ICMP traffic by pinging/connecting to our Linux Virtual Machine
+3. To connect to our Linux VM, open our command-line in Windows (Powershell): Microsoft Desktop > Search bar > "Powershell"
+
+<p>We need the Private IP address of our Linux Machine</p>
+<Strong>What is the purpose in connecting to a private IP address?</strong>
+<p>Connecting to a private IP address is typically done within a local network or a private network environment. The purpose of connecting to a private IP address is to access and communicate with devices or services within that network. Private IP addresses are not directly accessible from the internet but are used for internal network communication. By connecting to a private IP address, you can interact with resources such as computers, servers, printers, or other devices within the local network, enabling tasks like file sharing, remote management, or accessing network services within that private network.</p>
+
+
 
 
 
