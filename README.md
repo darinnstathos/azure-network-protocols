@@ -195,8 +195,51 @@ We’re now going to place a Network Security rule inside of Azure to stop ICMP 
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<p>We can now see our rule has been added. We will navigate back inside the Microsoft Windows VM and see the traffic on Wireshark. We see that the Request has Timed Out. This means that there is a Firewall preventing the inbound traffic.</p>
 
+<p>Blocking ICMP (Internet Control Message Protocol) traffic on a firewall is often done for security reasons. ICMP can be misused for network reconnaissance, such as ICMP-based scanning or ICMP redirect attacks, which can compromise network security. By blocking ICMP traffic, potential vulnerabilities and information leakage can be mitigated, reducing the attack surface and enhancing the overall security posture of the network. However, it's important to note that blocking ICMP may also hinder legitimate network troubleshooting and diagnostic capabilities, so firewall rules should be carefully configured based on the specific security requirements and operational needs of the network.</p>
 
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Now that we have witnessed what Network Security Groups can do, we will allow for inbound ICMP traffic again:
+
+8. Navigate back to Azure Portal > Select 'Virtual Machines' > Select 'VM2-Linux' > 'Networking' > Delete our Network Security Rule
+9. Now that we have deleted this rule, the ‘ping 10.0.0.5 -t’ command should start working again. Inbound traffic is being permitted again since we deleted the rule that was preventing it. If we navigate back to our command line, we can see it being allowed again
+10. Type ‘Control C’ to stop the constant pinging in the command-line
+
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
+
+<h3>Step 5: Test Out Various Other Networking Protocols (SSH, DHCP, DNS, RDP)</h3>
+
+<h4>SSH Protocol:</h4>
+<strong>What is SSH protocol?</strong>
+<p>SSH protocol allows us to access another computer's command-line. SSH (Secure Shell) is a cryptographic network protocol that allows secure remote access and communication between computers. It provides a secure way to log into a remote system over an untrusted network, encrypting the connection and preventing unauthorized access.</p>
+
+<p>SSH is important because it enables secure remote administration, file transfers, and tunneling of other network services. It ensures confidentiality, integrity, and authentication, making it a crucial protocol for secure remote access and management of systems and servers.</p>
+
+1. Navigate to Microsoft Windows VM > Open Wireshark > filter by SSH by typing "SSH" into search bar > press "Enter" key
+
+<p>Using the command-line (Powershell) in the Windows VM, we want to “SSH” into our Ubuntu Linux VM. Doing so will give us access to the Linux VM command-line. We will need the Private IP Address again (example: 10.0.0.5) and the username/password we set up when originally creating our Linux VM back in Step 1.</p>
+
+2. In Powershell, type “ssh [username]@[privateipaddress]”; For this example: "ssh darinstathos@10.0.0.5"
+3. When asked whether we want to continue connecting, type “Yes”
+
+<p>**Sidenote: just by us trying to access the Linux command-line, we can already see some traffic being created inside of Wireshark</p>
+
+4. Type in the password that you created. The characters will not show but trust that the command-line is aware of you typing your password
+5. We can now see SSH traffic being generated in Wireshark. Inside the command-line, the green colored text signifies that we are inside our Linux VM command-line
+6. Type ‘Exit’ and get out of our Linux VM and back into our Windows VM. We won’t do or change anything inside of our Linux command-line so for now
+
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
+
+<h4>DHCP Protocol</h4>
   
 
 
