@@ -75,7 +75,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <br>
 
-<h3>Step 2: Connect to the Microsoft Windows VM via Remote Desktop Connection</h3>
+<h3> Step 2: Connect to the Microsoft Windows VM via Remote Desktop Connection</h3>
 
 <p>Both our Windows and Linux Virtual Machines have been created. Now, it’s time to connect to our Windows Virtual Machine using Remote Desktop Connection and hop inside. We want to be able to access our Microsoft Operating System so that we can start observing Network Protocols.</p>
 
@@ -100,7 +100,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <br>
 
-<h3>Download and Install Wireshark through Windows VM</h3>
+<h3>Step 3: Download and Install Wireshark through Windows VM</h3>
 
 <strong>What is Wireshark and why is it useful?</strong>
 <p>Wireshark is a protocol analyzer, meaning it captures and analyzes network traffic in real-time. It helps in understanding and diagnosing network-related issues by giving detailed insights/information into the communication happening between devices on the network. Since you can peak into all the traffic coming through, it's useful in identifying problems, troubleshooting network performance, and detecting security vulnerabilities.</p>
@@ -126,7 +126,7 @@ We will now filter and observe various different network protocols and connect t
 
 <br>
 
-<h3>Observe ICMP Protocol & Connect to Linux Virtual Machine</h3>
+<h3>Step 4: Observe ICMP Protocol & Connect to Linux Virtual Machine</h3>
 
 <h4>Part 1: [xxxx]</h4>
 
