@@ -88,6 +88,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 1. Within Azure > Select 'Virtual Machines' > Select 'VM1-Windows' > Copy the Public IP Address
 2. Those with Microsoft Windows on their physical machine, navigate to search bar on desktop and type 'Remote Desktop Connection'. Those with MacOS on their physical machine, navigate to the App Store & download 'Microsoft Remote Desktop'
 
+<img src="https://i.imgur.com/xiKPKRF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <p>(I'm personally using MacOS so the following images will be taken from that perspective. However, the process for Microsoft Users is the same.)</P.
 
 3. Open 'Microsoft Remote Desktop' > Click 'Add PC'
