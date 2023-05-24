@@ -93,15 +93,15 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>(I'm personally using MacOS so the following images will be taken from that perspective. However, the process for Microsoft Users is the same.)</P.
 
 3. Open 'Microsoft Remote Desktop' > Click 'Add PC'
-4. Under PC Name: paste the Public IP address 
+4. Under PC Name: paste the Public IP address
 5. Double Click the recently added VM and sign in using the username/password created in Step 1
 6. Press ‘continue’ until you reach the ‘Welcome’ screen for WindowOS
 
 <p>We are now inside of our Windows Virtual Machine. The next step is to download/install Wireshark inside of our Windows Virtual Machine so that we can now finally observe Network Security Groups and Networking Protocols working in real time.</p>
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/5e56TZx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/CDEUvBI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 
 <br>
 
