@@ -196,8 +196,7 @@ The “-t” means to continuously, indefinitely “ping”.
 
 2. We can see in Wireshark via the Source/Destination & Request/Reply sections that our Windows VM and Linux VM keep talking to each other constantly & continuously 
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/iOAD7dS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 We’re now going to place a Network Security rule inside of Azure to stop ICMP traffic: 
 
