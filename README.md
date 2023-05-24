@@ -221,9 +221,8 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 10. Now that we have deleted this rule, the ‘ping 10.0.0.5 -t’ command should start working again. Inbound traffic is being permitted again since we deleted the rule that was preventing it. If we navigate back to our command line, we can see it being allowed again
 11. Type ‘Control C’ to stop the constant pinging in the command-line
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/lIsrvNG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Rz3T7sE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br>
 
