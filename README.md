@@ -319,8 +319,8 @@ We're going to use the Microsoft Windows VM command-line to find IP addresses of
 2. We can see that it’s already spamming traffic within Wireshark because we are currently using RDP since our physical machine is utilizing Remote Desktop Connection to operate our Virtual Machine 
 
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/B0UkLDR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 
 
 
