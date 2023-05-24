@@ -72,9 +72,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 6. There is nothing left to alter so we will select ‘Review + Create’ and ‘Create’
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/tT0HC9v.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/MH0oDyb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/AnZpMIx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br>
 
