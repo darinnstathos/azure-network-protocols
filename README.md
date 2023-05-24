@@ -38,8 +38,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>Virtual machines, in simple terms, are like computers within computers. They are software emulations of physical computers that allow you to run multiple operating systems or applications on a single physical machine. Virtual machines provide flexibility, allowing you to create and use different environments or systems without the need for separate physical hardware.</p>
 
 <h4>Creating our Resource Group & Microsoft Windows Virtual Machine</h4>
+
 1. Within Microsoft Azure, navigate to 'Resource Groups' via the search bar or quick access icon. Select 'Create Resource Group'
-2. For this example, we'll name the Resource Group: "RG-NSGP" (ResourceGroup--NetworkSecurityGroupsProtocol)
+2. Name the Resource Group: "RG-NSGP" (ResourceGroup--NetworkSecurityGroupsProtocol)
 3. It is recommended to place it the Resource Group in the United States (Example: (US) West US 3)
 4. There is nothing left for us to alter so select 'Review + Create'
 
