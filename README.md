@@ -58,7 +58,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <img src="https://i.imgur.com/7lD5Ddk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/pcjMUcX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/9dr8S3Z.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/tuUWdN9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <h4>Creating our Linux Ubuntu Virtual Machine</h4>
 
