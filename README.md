@@ -236,6 +236,8 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 1. Navigate to Microsoft Windows VM > Open Wireshark > filter by SSH by typing "SSH" into search bar > press "Enter" key
 
+<img src="https://i.imgur.com/BLZzzlp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <p>Using the command-line (Powershell) in the Windows VM, we want to “SSH” into our Ubuntu Linux VM. Doing so will give us access to the Linux VM command-line. We will need the Private IP Address again (example: 10.0.0.5) and the username/password we set up when originally creating our Linux VM back in Step 1.</p>
 
 2. In Powershell, type “ssh [username]@[privateipaddress]”; For this example: "ssh darinstathos@10.0.0.5"
@@ -244,11 +246,14 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 <p>**Sidenote: just by us trying to access the Linux command-line, we can already see some traffic being created inside of Wireshark</p>
 
 4. Type in the password that you created. The characters will not show but trust that the command-line is aware of you typing your password
+
+<img src="https://i.imgur.com/Xt8Y2Pc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 5. We can now see SSH traffic being generated in Wireshark. Inside the command-line, the green colored text signifies that we are inside our Linux VM command-line
 6. Type ‘Exit’ and get out of our Linux VM and back into our Windows VM. We won’t do or change anything inside of our Linux command-line so for now
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/8GzpJGp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/HUdqNEC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br>
 
