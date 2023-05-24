@@ -209,17 +209,17 @@ We’re now going to place a Network Security rule inside of Azure to stop ICMP 
 <img src="https://i.imgur.com/TvpoiEQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/LzBVxJA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<p>We can now see our rule has been added. We will navigate back inside the Microsoft Windows VM and see the traffic on Wireshark. We see that the Request has Timed Out. This means that there is a Firewall preventing the inbound traffic.</p>
+8. <p>We can now see our rule has been added. We will navigate back inside the Microsoft Windows VM and see the traffic on Wireshark. We see that the Request has Timed Out. This means that there is a Firewall preventing the inbound traffic.</p>
 
 <p>Blocking ICMP (Internet Control Message Protocol) traffic on a firewall is often done for security reasons. ICMP can be misused for network reconnaissance, such as ICMP-based scanning or ICMP redirect attacks, which can compromise network security. By blocking ICMP traffic, potential vulnerabilities and information leakage can be mitigated, reducing the attack surface and enhancing the overall security posture of the network. However, it's important to note that blocking ICMP may also hinder legitimate network troubleshooting and diagnostic capabilities, so firewall rules should be carefully configured based on the specific security requirements and operational needs of the network.</p>
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/CNVhjGM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 Now that we have witnessed what Network Security Groups can do, we will allow for inbound ICMP traffic again:
 
-8. Navigate back to Azure Portal > Select 'Virtual Machines' > Select 'VM2-Linux' > 'Networking' > Delete our Network Security Rule
-9. Now that we have deleted this rule, the ‘ping 10.0.0.5 -t’ command should start working again. Inbound traffic is being permitted again since we deleted the rule that was preventing it. If we navigate back to our command line, we can see it being allowed again
-10. Type ‘Control C’ to stop the constant pinging in the command-line
+9. Navigate back to Azure Portal > Select 'Virtual Machines' > Select 'VM2-Linux' > 'Networking' > Delete our Network Security Rule
+10. Now that we have deleted this rule, the ‘ping 10.0.0.5 -t’ command should start working again. Inbound traffic is being permitted again since we deleted the rule that was preventing it. If we navigate back to our command line, we can see it being allowed again
+11. Type ‘Control C’ to stop the constant pinging in the command-line
 
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
