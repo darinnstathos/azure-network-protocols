@@ -44,6 +44,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 3. It is recommended to place it the Resource Group in the United States (Example: (US) West US 3)
 4. There is nothing left for us to alter so select 'Review + Create'
 
+<img src="https://i.imgur.com/7C9XtMr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <p>Now that the Resource Group has been created, we can now place both our Virtual Machines (Windows & Linux Ubuntu) inside of it. First, we will create our Windows Virtual Machine.</p>
 
 5. Within Azure, naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
