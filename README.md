@@ -266,6 +266,9 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 <p>What we're going to do right now is request a new IP address from the DHCP server installed within Microsoft Azure and observe the traffic that happens on Wireshark:</p>
 
 1. Within Microsoft Windows VM > open 'Wireshark' > filter by 'DHCP' in the search bar on top > press "Enter" key
+
+<img src="https://i.imgur.com/hHLVIu9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 2. In the command-line (Powershell) we will type “ipconfig /renew” 
 
 <p>In simple terms, the command "ipconfig /renew" is like asking the network to give your device a new address. It tells your computer to request a fresh IP address from the DHCP server, which is responsible for assigning IP addresses on the network. This command is useful when you want to refresh your network connection or resolve connectivity issues by obtaining a new IP address.</p>
@@ -290,6 +293,9 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 We're going to use the Microsoft Windows VM command-line to find IP addresses of popular sites on the internet and witness the traffic it generates on Wireshark:
 
 1. Inside Microsoft Windows VM, navigate to Wireshark > filter by "DNS" or "tcp.port == 53" in the search bar > press "Enter" key
+
+<img src="https://i.imgur.com/uOXcmP1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 2. In the command-line (Powershell), type “nslookup www.google.com”
 
 <p>The "nslookup" command is like a detective tool for finding information about domain names and IP addresses. When you use the "nslookup" command and provide a domain name or IP address, it helps you discover details like the corresponding IP address, domain name ownership, and DNS configurations. It's a useful tool for troubleshooting network issues and checking the status of DNS servers.</p>
