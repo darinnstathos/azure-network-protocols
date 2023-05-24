@@ -144,7 +144,13 @@ We will now filter and observe various different network protocols and connect t
 
 1. Inside Wireshark, we can filter by ICMP by navigating to the search by at the top section, typing ‘ICMP’, and hitting the ‘Enter’ key
 2. The screen should clear as we are now only observing ICMP traffic. We will create some ICMP traffic by pinging/connecting to our Linux Virtual Machine
+
+<img src="https://i.imgur.com/PqLXwFg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 3. To connect to our Linux VM, open our command-line in Windows (Powershell): Microsoft Desktop > Search bar > "Powershell"
+
+<img src="https://i.imgur.com/ZGJtU64.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <p>We need the Private IP address of our Linux Machine</p>
 <Strong>What is the purpose in connecting to a private IP address?</strong>
@@ -153,15 +159,15 @@ We will now filter and observe various different network protocols and connect t
 
 4. Go to Azure portal (outside of the Windows VM) > select 'Virtual Machines' > select 'VM2-Linux' (our Linux VM)
 5. Scroll down slightly & under the "Networking" subheading, we can see our Private IP address (example: 10.0.0.5) > Copy Private IP address
+
+<img src="https://i.imgur.com/f5pyQXX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 6. Navigate back to Microsoft Windows VM command-line (Powershell) > we are going to ping to our Linux VM > Type "ping 10.0.0.5" > we can see data packets being transmitted on Wireshark as our two machines talk to one another via request/reply
 
 <Strong>What does the ping command do?</strong>
 <p>In simple terms, the "ping" command is like sending a message to another device on a network to see if it's there and how long it takes for the message to come back. It helps you check if a device is reachable and measure the time it takes for data to travel between your device and the target device. It's like saying "Hey, are you there?" and waiting for a response to know if the device is active and how fast it responds.</p>
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/valueBV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 7. We're going to connect to an external website (example: www.google.com) > Type "ping www.google.com" in the command-line
 
@@ -169,8 +175,8 @@ We will now filter and observe various different network protocols and connect t
 
 8. We can see in Wireshark, the reply/request from another IP address that is responding back to us. We can see it is one of Google’s public IP addresses. This means we have connectivity to the internet
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/GM54FCF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 
 <br>
 
