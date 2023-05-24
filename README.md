@@ -206,8 +206,8 @@ We’re now going to place a Network Security rule inside of Azure to stop ICMP 
 6. The priority number is important. We want to give it top priority. We want this rule to be honored and not allow other rules to tamper with it. Thus, we give it the earliest/smallest number so it’s placed at the top of the hierarchy. Anything above 300 is good so in this case we will type ‘200’
 7. We will give it the name ‘DenyICMPAnywhere’ and ‘Add’
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/TvpoiEQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/LzBVxJA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <p>We can now see our rule has been added. We will navigate back inside the Microsoft Windows VM and see the traffic on Wireshark. We see that the Request has Timed Out. This means that there is a Firewall preventing the inbound traffic.</p>
 
