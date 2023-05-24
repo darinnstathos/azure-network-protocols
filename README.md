@@ -117,6 +117,11 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 2. We want to download Wireshark for Windows Installer 64-bit since that is the current operating system we are using
 3. Once downloaded, you can access Wireshark via the top right hand corner by double-clicking ‘Open file’ or clicking ‘File Explorer’ at the bottom of the screen and navigating to ‘Downloads’
 4. The App Installer for Wireshark will open. Keep selecting ‘Next’, ‘Noted’, ‘Install’, and ‘Finish’. We will install Wireshark with all of its default settings. There is nothing we need to alter with the application. Agree to all terms.
+
+<img src="https://i.imgur.com/0kFOrdE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/a6pPJIp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 5. Navigate to the search bar on Windows Desktop and type ‘Wireshark’ > Open the application
 6. Select ‘Ethernet’ > Click the blue icon shark fin in the top left-hand in order to start capturing packets
 
@@ -124,10 +129,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 We will now filter and observe various different network protocols and connect to our Linux Virtual Machine.</p>
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/RHRptNX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/03qR8ty.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 
 <br>
 
