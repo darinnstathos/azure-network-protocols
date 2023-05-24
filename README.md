@@ -56,9 +56,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 10. There is nothing to change here, but take notice on how Azure automatically assigned/created a Virtual Network. In this case, it is named ‘(new) VM1-Windows-vnet’. When creating our Linux Virtual Machine, we’ll want to make sure it is also on this same network so that our two Virtual Machines are under one network and can communicate with one another.
 11. Select 'Review + Create'
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7lD5Ddk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/pcjMUcX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/9dr8S3Z.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <h4>Creating our Linux Ubuntu Virtual Machine</h4>
 
