@@ -29,7 +29,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Actions and Observations</h2>
 
-<h3>Step 1: Create Resource Group and Virtual Machines: Windows & Linux</h3>
+<h3>🟢Step 1: Create Resource Group and Virtual Machines: Windows & Linux</h3>
 
 <Strong>What are Resource Groups?</strong>
 <p>Resource groups in Microsoft Azure are containers that help manage and organize related Azure resources. They provide a logical grouping for resources, such as virtual machines, storage accounts, and networks, allowing administrators to manage, monitor, and apply policies to the resources collectively.</p>
@@ -78,7 +78,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <br>
 
-<h3> Step 2: Connect to the Microsoft Windows VM via Remote Desktop Connection</h3>
+<h3>🟢Step 2: Connect to the Microsoft Windows VM via Remote Desktop Connection</h3>
 
 <p>Both our Windows and Linux Virtual Machines have been created. Now, it’s time to connect to our Windows Virtual Machine using Remote Desktop Connection and hop inside. We want to be able to access our Microsoft Operating System so that we can start observing Network Protocols.</p>
 
@@ -105,7 +105,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <br>
 
-<h3>Step 3: Download and Install Wireshark through Windows VM</h3>
+<h3>🟢Step 3: Download and Install Wireshark through Windows VM</h3>
 
 <strong>What is Wireshark and why is it useful?</strong>
 <p>Wireshark is a protocol analyzer, meaning it captures and analyzes network traffic in real-time. It helps in understanding and diagnosing network-related issues by giving detailed insights/information into the communication happening between devices on the network. Since you can peak into all the traffic coming through, it's useful in identifying problems, troubleshooting network performance, and detecting security vulnerabilities.</p>
@@ -135,9 +135,9 @@ We will now filter and observe various different network protocols and connect t
 
 <br>
 
-<h3>Step 4: Observe ICMP Protocol & Connect to Linux Virtual Machine</h3>
+<h3>🟢Step 4: Observe ICMP Protocol & Connect to Linux Virtual Machine</h3>
 
-<h4>Part 1: [xxxx]</h4>
+<h4>Part 1: Obersving ICMP Traffic & Ping Command</h4>
 
 <Strong>What is ICMP?</strong>
 <p>Inside of Wireshark, we will filter by ICMP. ICMP (Internet Control Message Protocol) is a network protocol that allows devices on a network to send control and error messages to each other. It is primarily used for diagnostic and troubleshooting purposes. ICMP messages include things like ping requests and error notifications, helping to check if a device is reachable, measure network latency, and identify network issues such as unreachable hosts or congested connections. Essentially, ICMP is like a messaging system that helps devices communicate about network conditions and status.</p>
@@ -226,7 +226,7 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 <br>
 
-<h3>Step 5: Test Out Various Other Networking Protocols (SSH, DHCP, DNS, RDP)</h3>
+<h3>🟢Step 5: Test Out Various Other Networking Protocols (SSH, DHCP, DNS, RDP)</h3>
 
 <h4>SSH Protocol:</h4>
 <strong>What is SSH protocol?</strong>
