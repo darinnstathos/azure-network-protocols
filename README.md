@@ -29,7 +29,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Actions and Observations</h2>
 
-<h3>🟢Step 1: Create Resource Group and Virtual Machines: Windows & Linux</h3>
+<h3>🟢 Step 1: Create Resource Group and Virtual Machines: Windows & Linux</h3>
 
 <Strong>What are Resource Groups?</strong>
 
@@ -39,7 +39,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>Virtual machines, in simple terms, are like computers within computers. They are software emulations of physical computers that allow you to run multiple operating systems or applications on a single physical machine. Virtual machines provide flexibility, allowing you to create and use different environments or systems without the need for separate physical hardware.</p>
 
-<h4>🔵Creating our Resource Group & Microsoft Windows Virtual Machine:</h4>
+<h4>🔵 Process:</h4>
 
 1. Within Microsoft Azure, navigate to 'Resource Groups' via the search bar or quick access icon. Select 'Create Resource Group'
 2. Name the Resource Group: "RG-NSGP" (ResourceGroup--NetworkSecurityGroupsProtocol)
@@ -66,7 +66,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <br>
 
-<h4>🔵Creating our Linux Ubuntu Virtual Machine:</h4>
+<h4>🔵 Process:</h4>
 
 1. Azure > naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
 2. Next to 'Resource Group', we want the Resource Group created previously: "RG-NSGP"
@@ -86,7 +86,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <br>
 
-<h3>🟢Step 2: Connect to the Microsoft Windows VM via Remote Desktop Connection</h3>
+<h3>🟢 Step 2: Connect to the Microsoft Windows VM via Remote Desktop Connection</h3>
 
 <p>Both our Windows and Linux Virtual Machines have been created. Now, it’s time to connect to our Windows Virtual Machine using Remote Desktop Connection and hop inside. We want to be able to access our Microsoft Operating System so that we can start observing Network Protocols.</p>
 
@@ -94,7 +94,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>We are going to be copying the Public IP Addresses of our Virtual Machines in order to get inside of them. Public IP addresses, in simple terms, are unique numerical identifiers assigned to devices connected to the internet. They allow devices to communicate with other devices and services on the internet. Just like a home address helps identify where you live, a public IP address helps identify and locate devices, such as computers or routers, on the internet, enabling them to send and receive data across the global network.</p>
 
-<h4>🔵Process:</h4>
+<h4>🔵 Process:</h4>
 
 1. Within Azure > Select 'Virtual Machines' > Select 'VM1-Windows' > Copy the Public IP Address
 2. Those with Microsoft Windows on their physical machine, navigate to search bar on desktop and type 'Remote Desktop Connection'. Those with MacOS on their physical machine, navigate to the App Store & download 'Microsoft Remote Desktop'
@@ -120,13 +120,13 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <br>
 
-<h3>🟢Step 3: Download and Install Wireshark through Windows VM</h3>
+<h3>🟢 Step 3: Download and Install Wireshark through Windows VM</h3>
 
 <strong>What is Wireshark and why is it useful?</strong>
 
 <p>Wireshark is a protocol analyzer, meaning it captures and analyzes network traffic in real-time. It helps in understanding and diagnosing network-related issues by giving detailed insights/information into the communication happening between devices on the network. Since you can peak into all the traffic coming through, it's useful in identifying problems, troubleshooting network performance, and detecting security vulnerabilities.</p>
 
-<h4>🔵Process:</h4>
+<h4>🔵 Process:</h4>
 
 1. Inside of our Microsoft Windows VM, navigate to 'Microsoft Edge > Search 'Download Wireshark'
 
@@ -159,7 +159,7 @@ We will now filter and observe various different network protocols and connect t
 
 <br>
 
-<h3>🟢Step 4: Observe ICMP Protocol & Connect to Linux Virtual Machine</h3>
+<h3>🟢 Step 4: Observe ICMP Protocol & Connect to Linux Virtual Machine</h3>
 
 <h4>Part 1: Obersving ICMP Traffic & Ping Command</h4>
 
@@ -167,7 +167,7 @@ We will now filter and observe various different network protocols and connect t
 
 <p>Inside of Wireshark, we will filter by ICMP. ICMP (Internet Control Message Protocol) is a network protocol that allows devices on a network to send control and error messages to each other. It is primarily used for diagnostic and troubleshooting purposes. ICMP messages include things like ping requests and error notifications, helping to check if a device is reachable, measure network latency, and identify network issues such as unreachable hosts or congested connections. Essentially, ICMP is like a messaging system that helps devices communicate about network conditions and status.</p>
 
-<h4>🔵Process:</h4>
+<h4>🔵 Process:</h4>
 
 1. Inside Wireshark, we can filter by ICMP by navigating to the search by at the top section, typing ‘ICMP’, and hitting the ‘Enter’ key
 2. The screen should clear as we are now only observing ICMP traffic. We will create some ICMP traffic by pinging/connecting to our Linux Virtual Machine
@@ -235,7 +235,7 @@ NSGs help control access to Azure resources by permitting or denying network tra
 
 By associating NSGs with virtual networks and subnets, you can create a set of rules to control network traffic and apply security policies across multiple resources. This allows for fine-grained control over network communication and helps ensure the security and integrity of your Azure infrastructure.</p>
 
-<h4>🔵Process:</h4>
+<h4>🔵 Process:</h4>
 
 1. In the command-line inside of our Microsoft Windows VM, type “ping 10.0.0.5 -t”
 The “-t” means to continuously, indefinitely “ping”.
@@ -285,9 +285,9 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 <br>
 <br>
 
-<h3>🟢Step 5: Test Out Various Other Networking Protocols (SSH, DHCP, DNS, RDP)</h3>
+<h3>🟢 Step 5: Test Out Various Other Networking Protocols (SSH, DHCP, DNS, RDP)</h3>
 
-<h4>🔵SSH Protocol:</h4>
+<h4>🔵 SSH Protocol:</h4>
 
 <strong>What is SSH protocol?</strong>
 
@@ -322,7 +322,7 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 <br>
 
-<h4>🔵DHCP Protocol:</h4>
+<h4>🔵 DHCP Protocol:</h4>
 
 <strong>What is DHCP protocol?</strong>
 
@@ -353,7 +353,7 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 <br>
 
-<h4>🔵DNS Protocol:</h4>
+<h4>🔵 DNS Protocol:</h4>
 
 <strong>What is DNS protocol?</strong>
 
@@ -380,7 +380,7 @@ We're going to use the Microsoft Windows VM command-line to find IP addresses of
 
 <br>
 
-<h4>🔵RDP Protocol:</h4>
+<h4>🔵 RDP Protocol:</h4>
 
 <strong>What is RDP Protocol?</strong>
 
