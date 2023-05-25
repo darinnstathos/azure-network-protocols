@@ -225,6 +225,7 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 <img src="https://i.imgur.com/Rz3T7sE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br>
+<br>
 
 <h3>🟢Step 5: Test Out Various Other Networking Protocols (SSH, DHCP, DNS, RDP)</h3>
 
@@ -309,7 +310,7 @@ We're going to use the Microsoft Windows VM command-line to find IP addresses of
 
 <br>
 
-<h4>RDP Protocol:</h4>
+<h4><u>RDP Protocol:</u></h4>
 
 <strong>What is RDP Protocol?</strong>
 
