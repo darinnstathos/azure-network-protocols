@@ -35,7 +35,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>Resource groups in Microsoft Azure are containers that help manage and organize related Azure resources. They provide a logical grouping for resources, such as virtual machines, storage accounts, and networks, allowing administrators to manage, monitor, and apply policies to the resources collectively.</p>
 
-<Strong><u>What are Virtual Machines?</u></Strong>
+<Strong>What are Virtual Machines?</Strong>
 
 <p>Virtual machines, in simple terms, are like computers within computers. They are software emulations of physical computers that allow you to run multiple operating systems or applications on a single physical machine. Virtual machines provide flexibility, allowing you to create and use different environments or systems without the need for separate physical hardware.</p>
 
@@ -47,6 +47,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 4. There is nothing left for us to alter so select 'Review + Create'
 
 <img src="https://i.imgur.com/7C9XtMr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 <p>Now that the Resource Group has been created, we can now place both our Virtual Machines (Windows & Linux Ubuntu) inside of it. First, we will create our Windows Virtual Machine.</p>
 
@@ -62,6 +64,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/pcjMUcX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/tuUWdN9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<br>
+
 <h4>Creating our Linux Ubuntu Virtual Machine:</h4>
 
 1. Azure > naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
@@ -73,6 +77,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>We can see that we have the same virtual network as our Microsoft Windows VM. Again, this allows for our Virtual Machines to better communicate with one another as they are now on the same network</P>
 
 6. There is nothing left to alter so we will select ‘Review + Create’ and ‘Create’
+
+<br>
 
 <img src="https://i.imgur.com/tT0HC9v.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/MH0oDyb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -91,6 +97,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 1. Within Azure > Select 'Virtual Machines' > Select 'VM1-Windows' > Copy the Public IP Address
 2. Those with Microsoft Windows on their physical machine, navigate to search bar on desktop and type 'Remote Desktop Connection'. Those with MacOS on their physical machine, navigate to the App Store & download 'Microsoft Remote Desktop'
 
+<br>
+
 <img src="https://i.imgur.com/xiKPKRF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <p>(I'm personally using MacOS so the following images will be taken from that perspective. However, the process for Microsoft Users is the same.)</P.
@@ -101,6 +109,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 6. Press ‘continue’ until you reach the ‘Welcome’ screen for WindowOS
 
 <p>We are now inside of our Windows Virtual Machine. The next step is to download/install Wireshark inside of our Windows Virtual Machine so that we can now finally observe Network Security Groups and Networking Protocols working in real time.</p>
+
+<br>
 
 <img src="https://i.imgur.com/5e56TZx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/CDEUvBI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -118,12 +128,18 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>The link is also here:https://www.wireshark.org/download.html</p>
 
+<br>
+
 2. We want to download Wireshark for Windows Installer 64-bit since that is the current operating system we are using
 3. Once downloaded, you can access Wireshark via the top right hand corner by double-clicking ‘Open file’ or clicking ‘File Explorer’ at the bottom of the screen and navigating to ‘Downloads’
 4. The App Installer for Wireshark will open. Keep selecting ‘Next’, ‘Noted’, ‘Install’, and ‘Finish’. We will install Wireshark with all of its default settings. There is nothing we need to alter with the application. Agree to all terms.
 
+<br>
+
 <img src="https://i.imgur.com/0kFOrdE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/a6pPJIp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 
 5. Navigate to the search bar on Windows Desktop and type ‘Wireshark’ > Open the application
@@ -150,12 +166,19 @@ We will now filter and observe various different network protocols and connect t
 1. Inside Wireshark, we can filter by ICMP by navigating to the search by at the top section, typing ‘ICMP’, and hitting the ‘Enter’ key
 2. The screen should clear as we are now only observing ICMP traffic. We will create some ICMP traffic by pinging/connecting to our Linux Virtual Machine
 
+<br>
+
 <img src="https://i.imgur.com/PqLXwFg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<br>
 
 3. To connect to our Linux VM, open our command-line in Windows (Powershell): Microsoft Desktop > Search bar > "Powershell"
 
+<br>
+
 <img src="https://i.imgur.com/ZGJtU64.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 <p>We need the Private IP address of our Linux Machine</p>
 
@@ -166,7 +189,11 @@ We will now filter and observe various different network protocols and connect t
 4. Go to Azure portal (outside of the Windows VM) > select 'Virtual Machines' > select 'VM2-Linux' (our Linux VM)
 5. Scroll down slightly & under the "Networking" subheading, we can see our Private IP address (example: 10.0.0.5) > Copy Private IP address
 
+<br>
+
 <img src="https://i.imgur.com/f5pyQXX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 6. Navigate back to Microsoft Windows VM command-line (Powershell) > we are going to ping to our Linux VM > Type "ping 10.0.0.5" > we can see data packets being transmitted on Wireshark as our two machines talk to one another via request/reply
 
@@ -174,7 +201,10 @@ We will now filter and observe various different network protocols and connect t
 
 <p>In simple terms, the "ping" command is like sending a message to another device on a network to see if it's there and how long it takes for the message to come back. It helps you check if a device is reachable and measure the time it takes for data to travel between your device and the target device. It's like saying "Hey, are you there?" and waiting for a response to know if the device is active and how fast it responds.</p>
 
+
 <img src="https://i.imgur.com/valueBV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 7. We're going to connect to an external website (example: www.google.com) > Type "ping www.google.com" in the command-line
 
@@ -204,7 +234,11 @@ The “-t” means to continuously, indefinitely “ping”.
 
 2. We can see in Wireshark via the Source/Destination & Request/Reply sections that our Windows VM and Linux VM keep talking to each other constantly & continuously 
 
+<br>
+
 <img src="https://i.imgur.com/iOAD7dS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 We’re now going to place a Network Security rule inside of Azure to stop ICMP traffic: 
 
@@ -214,8 +248,12 @@ We’re now going to place a Network Security rule inside of Azure to stop ICMP 
 6. The priority number is important. We want to give it top priority. We want this rule to be honored and not allow other rules to tamper with it. Thus, we give it the earliest/smallest number so it’s placed at the top of the hierarchy. Anything above 300 is good so in this case we will type ‘200’
 7. We will give it the name ‘DenyICMPAnywhere’ and ‘Add’
 
+<br>
+
 <img src="https://i.imgur.com/TvpoiEQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/LzBVxJA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 8. <p>We can now see our rule has been added. We will navigate back inside the Microsoft Windows VM and see the traffic on Wireshark. We see that the Request has Timed Out. This means that there is a Firewall preventing the inbound traffic.</p>
 
@@ -223,11 +261,15 @@ We’re now going to place a Network Security rule inside of Azure to stop ICMP 
 
 <img src="https://i.imgur.com/CNVhjGM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<br>
+
 Now that we have witnessed what Network Security Groups can do, we will allow for inbound ICMP traffic again:
 
 9. Navigate back to Azure Portal > Select 'Virtual Machines' > Select 'VM2-Linux' > 'Networking' > Delete our Network Security Rule
 10. Now that we have deleted this rule, the ‘ping 10.0.0.5 -t’ command should start working again. Inbound traffic is being permitted again since we deleted the rule that was preventing it. If we navigate back to our command line, we can see it being allowed again
 11. Type ‘Control C’ to stop the constant pinging in the command-line
+
+<br>
 
 <img src="https://i.imgur.com/lIsrvNG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/Rz3T7sE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -249,6 +291,8 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 <img src="https://i.imgur.com/BLZzzlp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<br>
+
 <p>Using the command-line (Powershell) in the Windows VM, we want to “SSH” into our Ubuntu Linux VM. Doing so will give us access to the Linux VM command-line. We will need the Private IP Address again (example: 10.0.0.5) and the username/password we set up when originally creating our Linux VM back in Step 1.</p>
 
 2. In Powershell, type “ssh [username]@[privateipaddress]”; For this example: "ssh darinstathos@10.0.0.5"
@@ -259,6 +303,8 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 4. Type in the password that you created. The characters will not show but trust that the command-line is aware of you typing your password
 
 <img src="https://i.imgur.com/Xt8Y2Pc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 5. We can now see SSH traffic being generated in Wireshark. Inside the command-line, the green colored text signifies that we are inside our Linux VM command-line
 6. Type ‘Exit’ and get out of our Linux VM and back into our Windows VM. We won’t do or change anything inside of our Linux command-line so for now
@@ -278,7 +324,11 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 1. Within Microsoft Windows VM > open 'Wireshark' > filter by 'DHCP' in the search bar on top > press "Enter" key
 
+<br>
+
 <img src="https://i.imgur.com/hHLVIu9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br>
 
 2. In the command-line (Powershell) we will type “ipconfig /renew” 
 
@@ -307,6 +357,8 @@ We're going to use the Microsoft Windows VM command-line to find IP addresses of
 
 <img src="https://i.imgur.com/uOXcmP1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+<br>
+
 2. In the command-line (Powershell), type “nslookup www.google.com”
 
 <p>The "nslookup" command is like a detective tool for finding information about domain names and IP addresses. When you use the "nslookup" command and provide a domain name or IP address, it helps you discover details like the corresponding IP address, domain name ownership, and DNS configurations. It's a useful tool for troubleshooting network issues and checking the status of DNS servers.</p>
@@ -329,6 +381,7 @@ We're going to use the Microsoft Windows VM command-line to find IP addresses of
 1. Inside Microsoft Windows VM, navigate to Wireshark > filter by "tcp.port == 3389" in the search bar (TCP Port 3389 is the port using for Remote Desktop Protocol) > press "Enter" key
 2. We can see that it’s already spamming traffic within Wireshark because we are currently using RDP since our physical machine is utilizing Remote Desktop Connection to operate our Virtual Machine 
 
+<br>
 
 <img src="https://i.imgur.com/B0UkLDR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
