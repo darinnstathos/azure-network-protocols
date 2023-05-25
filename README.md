@@ -33,32 +33,34 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <Strong>What are Resource Groups?</strong>
 
-<p>Resource groups in Microsoft Azure are containers that help manage and organize related Azure resources. They provide a logical grouping for resources, such as virtual machines, storage accounts, and networks, allowing administrators to manage, monitor, and apply policies to the resources collectively.</p>
+<p>Resource groups in Microsoft Azure are containers that help manage and organize related Azure resources. They provide a logical grouping for resources -- such as virtual machines, storage accounts, and networks -- allowing administrators to manage, monitor, and apply policies to the resources collectively.</p>
 
 <Strong>What are Virtual Machines?</Strong>
 
-<p>Virtual machines, in simple terms, are like computers within computers. They are software emulations of physical computers that allow you to run multiple operating systems or applications on a single physical machine. Virtual machines provide flexibility, allowing you to create and use different environments or systems without the need for separate physical hardware.</p>
+<p>Virtual machine are like computers within computers. They are software emulations of physical computers that allow you to run multiple operating systems or applications on a single physical machine. Virtual machines provide flexibility, allowing you to create and use different environments or systems without the need for separate physical hardware.</p>
 
-<h4>🔵 Process of Creating Resource Group & Windows VM:</h4>
+<h4>🔵 Process of Creating Resource Group</h4>
 
 1. Within Microsoft Azure, navigate to 'Resource Groups' via the search bar or quick access icon. Select 'Create Resource Group'
 2. Name the Resource Group: "RG-NSGP" (ResourceGroup--NetworkSecurityGroupsProtocol)
-3. It is recommended to place it the Resource Group in the United States (Example: (US) West US 3)
-4. There is nothing left for us to alter so select 'Review + Create'
+3. It is recommended to place the Resource Group in the United States (Example: (US) West US 3)
+4. There is nothing left for us to alter so select: 'Review + Create'
 
-<img src="https://i.imgur.com/7C9XtMr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7C9XtMr.png" height="80%" width="80%" alt="Creating RG-NSGP Resource Group"/>
 
 <br>
 
-<p>Now that the Resource Group has been created, we can now place both our Virtual Machines (Windows & Linux Ubuntu) inside of it. First, we will create our Windows Virtual Machine.</p>
+<p>Now that the Resource Group has been created, we can place both of our Virtual Machines (Windows & Linux Ubuntu) inside of it. First, we will create our Windows Virtual Machine.</p>
 
-5. Within Azure, naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
-6. Next to ‘Resource Group’, we want to select the Resource Group we just created: "RG-NSGP"
-7. VM Name: 'VM1-Windows', Operating System Image: ‘Windows 10 Pro, version 22H2 - x64 Gen2', Size: 2vcpus (anything above 1vcpu will allow the VM to run efficiently. Otherwise, it'll be slow and lag.)
-8. Create a username and password. We will be asked for this later when connecting to our VM via Remote Desktop Connection. 
-9. Select the blue check mark under licensing: 'I confirm I have an eligible Windows 10/11 license with multi-tenant hosting rights.’
-10. There is nothing to change here, but take notice on how Azure automatically assigned/created a Virtual Network. In this case, it is named ‘(new) VM1-Windows-vnet’. When creating our Linux Virtual Machine, we’ll want to make sure it is also on this same network so that our two Virtual Machines are under one network and can communicate with one another.
-11. Select 'Review + Create'
+<h4>🔵 Process of Creating Windows VM:</h4>
+
+1. Within Azure, naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
+2. Next to ‘Resource Group’, select the Resource Group we just created: "RG-NSGP"
+3. VM Name: 'VM1-Windows', Operating System Image: ‘Windows 10 Pro, version 22H2 - x64 Gen2', Size: 2vcpus (anything above 1vcpu will allow the VM to run efficiently. Otherwise, it'll be slow and lag.)
+4. Create a username and password. We will be asked for this later when connecting to our VM via Remote Desktop Connection. 
+5. Select the blue check mark under Licensing: 'I confirm I have an eligible Windows 10/11 license with multi-tenant hosting rights.’
+6. There is nothing to change here, but take notice on how Azure automatically assigned/created a Virtual Network. In this case, it is named ‘(new) VM1-Windows-vnet’. When creating our Linux Virtual Machine, we’ll want to make sure it is also on this same network so that our two Virtual Machines are under one network and can communicate with one another.
+7. Select: 'Review + Create'
 
 <img src="https://i.imgur.com/7lD5Ddk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/pcjMUcX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -68,13 +70,13 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h4>🔵 Process of Creating Linux VM:</h4>
 
-1. Azure > naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
+1. Go to Azure > naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
 2. Next to 'Resource Group', we want the Resource Group created previously: "RG-NSGP"
 3. VM Name: 'VM2-Linux', Operating System Image: 'Ubuntu Server 20.04 LTS -x64 Gen2', Size: 2vcpu
-4. Under ‘Administrator Account’, instead of selecting ‘SSH’, we want to select ‘Password’ and create a username and password again. This username and password will be necessary when we access this Linux command line from our Windows VM
-5. We’ll forward from ‘Next: Disks >’ and then to ‘Next: Networking >’: 
+4. Under ‘Administrator Account’, instead of selecting ‘SSH’, we want to select ‘Password’ and create a username and password again. This username and password will be necessary when we access the Linux command-line from our Windows VM later
+5. Forward from ‘Next: Disks >’ and then to ‘Next: Networking >’: 
 
-<p>We can see that we have the same virtual network as our Microsoft Windows VM. Again, this allows for our Virtual Machines to better communicate with one another as they are now on the same network</P>
+<p>We can see that we have the same virtual network as our Microsoft Windows VM: 'VM1-Windows-vnet'. Again, this allows for our Virtual Machines to better communicate with one another as they are now on the same network.</P>
 
 6. There is nothing left to alter so we will select ‘Review + Create’ and ‘Create’
 
@@ -92,12 +94,12 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <Strong>What are Public IP Addresses?</Strong>
 
-<p>We are going to be copying the Public IP Addresses of our Virtual Machines in order to get inside of them. Public IP addresses, in simple terms, are unique numerical identifiers assigned to devices connected to the internet. They allow devices to communicate with other devices and services on the internet. Just like a home address helps identify where you live, a public IP address helps identify and locate devices, such as computers or routers, on the internet, enabling them to send and receive data across the global network.</p>
+<p>We are going to be copying the Public IP Addresses of our Virtual Machines in order to get inside of them. Public IP addresses are unique numerical identifiers assigned to devices connected to the internet. They allow devices to communicate with other devices and services on the internet. Just like a home address helps identify where you live, a public IP address helps identify and locate devices, such as computers or routers, on the internet, enabling them to send and receive data across the global network.</p>
 
 <h4>🔵 Process of Connecting VM:</h4>
 
 1. Within Azure > Select 'Virtual Machines' > Select 'VM1-Windows' > Copy the Public IP Address
-2. Those with Microsoft Windows on their physical machine, navigate to search bar on desktop and type 'Remote Desktop Connection'. Those with MacOS on their physical machine, navigate to the App Store & download 'Microsoft Remote Desktop'
+2. Those with Microsoft Windows on their physical machine, navigate to the search bar on desktop and type 'Remote Desktop Connection'. Those with MacOS on their physical machine, navigate to the App Store & download 'Microsoft Remote Desktop'
 
 <br>
 
@@ -110,7 +112,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 5. Double Click the recently added VM and sign in using the username/password created in Step 1
 6. Press ‘continue’ until you reach the ‘Welcome’ screen for WindowOS
 
-<p>We are now inside of our Windows Virtual Machine. The next step is to download/install Wireshark inside of our Windows Virtual Machine so that we can now finally observe Network Security Groups and Networking Protocols working in real time.</p>
+<p>We are now inside of our Windows Virtual Machine. The next step is to download/install Wireshark inside of our Windows Virtual Machine so that we can now finally observe Network Security Groups and Networking Protocols in real time.</p>
 
 <br>
 
@@ -132,10 +134,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>The link is also here:https://www.wireshark.org/download.html</p>
 
-<br>
 
 2. We want to download Wireshark for Windows Installer 64-bit since that is the current operating system we are using
-3. Once downloaded, you can access Wireshark via the top right hand corner by double-clicking ‘Open file’ or clicking ‘File Explorer’ at the bottom of the screen and navigating to ‘Downloads’
+3. Once downloaded, you can access Wireshark via the top right-hand corner by double-clicking ‘Open file’ or clicking ‘File Explorer’ at the bottom of the screen and navigating to ‘Downloads’
 4. The App Installer for Wireshark will open. Keep selecting ‘Next’, ‘Noted’, ‘Install’, and ‘Finish’. We will install Wireshark with all of its default settings. There is nothing we need to alter with the application. Agree to all terms.
 
 <br>
@@ -178,7 +179,7 @@ We will now filter and observe various different network protocols and connect t
 
 <br>
 
-3. To connect to our Linux VM, open our command-line in Windows (Powershell): Microsoft Desktop > Search bar > "Powershell"
+3. To connect to our Linux VM, open the command-line in Windows (Powershell): Microsoft Desktop > Search bar > type "Powershell"
 
 <br>
 
@@ -188,9 +189,9 @@ We will now filter and observe various different network protocols and connect t
 
 <p>We need the Private IP address of our Linux Machine</p>
 
-<Strong>What is the purpose in connecting to a private IP address?</strong>
+<Strong>What is the purpose in connecting to a Private IP address?</strong>
 
-<p>Connecting to a private IP address is typically done within a local network or a private network environment. The purpose of connecting to a private IP address is to access and communicate with devices or services within that network. Private IP addresses are not directly accessible from the internet but are used for internal network communication. By connecting to a private IP address, you can interact with resources such as computers, servers, printers, or other devices within the local network, enabling tasks like file sharing, remote management, or accessing network services within that private network.</p>
+<p>Connecting to a private IP address is typically done within a local network or a private network environment. The purpose of connecting to a private IP address is to access and communicate with devices or services within that network. Private IP addresses are not directly accessible from the internet but are used for internal network communication. By connecting to a Private IP address, you can interact with resources such as computers, servers, printers, or other devices within the local network, enabling tasks like file sharing, remote management, or accessing network services within that private network.</p>
 
 4. Go to Azure portal (outside of the Windows VM) > select 'Virtual Machines' > select 'VM2-Linux' (our Linux VM)
 5. Scroll down slightly & under the "Networking" subheading, we can see our Private IP address (example: 10.0.0.5) > Copy Private IP address
@@ -205,7 +206,7 @@ We will now filter and observe various different network protocols and connect t
 
 <Strong>What does the ping command do?</strong>
 
-<p>In simple terms, the "ping" command is like sending a message to another device on a network to see if it's there and how long it takes for the message to come back. It helps you check if a device is reachable and measure the time it takes for data to travel between your device and the target device. It's like saying "Hey, are you there?" and waiting for a response to know if the device is active and how fast it responds.</p>
+<p>The "ping" command is like sending a message to another device on a network to see if it's there and how long it takes for the message to come back. It helps you check if a device is reachable and measure the time it takes for data to travel between your device and the target device. It's like saying "Hey, are you there?" and waiting for a response to know if the device is active and how fast it responds.</p>
 
 
 <img src="https://i.imgur.com/valueBV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -214,7 +215,7 @@ We will now filter and observe various different network protocols and connect t
 
 7. We're going to connect to an external website (example: www.google.com) > Type "ping www.google.com" in the command-line
 
-<p>Pinging to an external, public website allows us to check connectivity to the internet. If pinging to www.google.com fails, it typically indicates that the computer is unable to establish a network connection or reach the destination server (in this case, google.com). This could be due to various issues such as a loss of internet connectivity, DNS resolution problems, firewall restrictions, or a problem with the target server itself</p>
+<p>Pinging to an external, public website allows us to check connectivity to the internet. If pinging to www.google.com fails, it typically indicates that the computer is unable to establish a network connection or reach the destination server (in this case, google.com). This could be due to various issues such as a loss of internet connectivity, DNS resolution problems, firewall restrictions, or a problem with the target server itself.</p>
 
 8. We can see in Wireshark, the reply/request from another IP address that is responding back to us. We can see it is one of Google’s public IP addresses. This means we have connectivity to the internet
 
@@ -225,7 +226,7 @@ We will now filter and observe various different network protocols and connect t
 
 <h4>Part 2: Network Security Groups in Action</h4>
 
-<p>Now that we have pinged successfully to our Linux VM and have observed connectivity to the internet, we will create a never-ending,perpetual ping to our Linux VM. This is so we can later witness Network Security Groups and Firewalls in action.</p>
+<p>Now that we have pinged successfully to our Linux VM and have observed connectivity to the internet, we will create a never-ending, perpetual ping to our Linux VM. This is so we can later witness Network Security Groups and Firewalls in action.</p>
 
 <strong>What are Network Security Groups in Azure?</strong>
 
@@ -253,7 +254,7 @@ We’re now going to place a Network Security rule inside of Azure to stop ICMP 
 3. Navigate to Azure (outside of Windows VM) > Select 'Virtual Machines' > Select 'VM2-Linux'
 4. Select ‘Networking’ on the left-hand bar > Click ‘Add Inbound Security Rule’
 5. Our goal is to cease ICMP traffic from anywhere and everywhere. Thus, we leave the Source with “Any” and Destination “Any”. Port ranges don’t need to be specified since we want to stop it from everywhere. Under ‘Protocol’ select ‘ICMP’. The action should be ‘Deny’ since we want to cease traffic.
-6. The priority number is important. We want to give it top priority. We want this rule to be honored and not allow other rules to tamper with it. Thus, we give it the earliest/smallest number so it’s placed at the top of the hierarchy. Anything above 300 is good so in this case we will type ‘200’
+6. The priority number is important. We want to give it top priority. We want this rule to be honored and not allow other rules to tamper with it. Thus, we give it the earliest/smallest number so it’s placed at the top of the hierarchy. Anything above 300 is good as an extra measure in avoiding the SSH rule. In this case we will type ‘200’
 7. We will give it the name ‘DenyICMPAnywhere’ and ‘Add’
 
 <br>
@@ -263,7 +264,9 @@ We’re now going to place a Network Security rule inside of Azure to stop ICMP 
 
 <br>
 
-8. <p>We can now see our rule has been added. We will navigate back inside the Microsoft Windows VM and see the traffic on Wireshark. We see that the Request has Timed Out. This means that there is a Firewall preventing the inbound traffic.</p>
+8. <p>We can now see our rule has been added. We will navigate back inside the Microsoft Windows VM and see the traffic on Wireshark. We see that the Request has 'Timed Out'. This means that there is a Firewall preventing the inbound traffic.</p>
+
+<Strong>Why block ICMP Traffic?</strong>
 
 <p>Blocking ICMP (Internet Control Message Protocol) traffic on a firewall is often done for security reasons. ICMP can be misused for network reconnaissance, such as ICMP-based scanning or ICMP redirect attacks, which can compromise network security. By blocking ICMP traffic, potential vulnerabilities and information leakage can be mitigated, reducing the attack surface and enhancing the overall security posture of the network. However, it's important to note that blocking ICMP may also hinder legitimate network troubleshooting and diagnostic capabilities, so firewall rules should be carefully configured based on the specific security requirements and operational needs of the network.</p>
 
@@ -275,7 +278,7 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 9. Navigate back to Azure Portal > Select 'Virtual Machines' > Select 'VM2-Linux' > 'Networking' > Delete our Network Security Rule
 10. Now that we have deleted this rule, the ‘ping 10.0.0.5 -t’ command should start working again. Inbound traffic is being permitted again since we deleted the rule that was preventing it. If we navigate back to our command line, we can see it being allowed again
-11. Type ‘Control C’ to stop the constant pinging in the command-line
+11. Type ‘Control C’ in the command-line to stop the constant pinging 
 
 <br>
 
@@ -310,14 +313,14 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 <p>**Sidenote: just by us trying to access the Linux command-line, we can already see some traffic being created inside of Wireshark</p>
 
-4. Type in the password that you created. The characters will not show but trust that the command-line is aware of you typing your password
+4. Type in the password that you created and hit the 'Enter' key. The characters will not show but trust that the command-line is aware of you typing your password
 
 <img src="https://i.imgur.com/Xt8Y2Pc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br>
 
 5. We can now see SSH traffic being generated in Wireshark. Inside the command-line, the green colored text signifies that we are inside our Linux VM command-line
-6. Type ‘Exit’ and get out of our Linux VM and back into our Windows VM. We won’t do or change anything inside of our Linux command-line so for now
+6. Type ‘Exit’ and get out of our Linux VM and back into our Windows VM. We won’t do or change anything inside of our Linux command-line for now
 
 <img src="https://i.imgur.com/8GzpJGp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/HUdqNEC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -342,9 +345,9 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 <br>
 
-2. In the command-line (Powershell) we will type “ipconfig /renew” 
+2. In the command-line (Powershell), type “ipconfig /renew” 
 
-<p>In simple terms, the command "ipconfig /renew" is like asking the network to give your device a new address. It tells your computer to request a fresh IP address from the DHCP server, which is responsible for assigning IP addresses on the network. This command is useful when you want to refresh your network connection or resolve connectivity issues by obtaining a new IP address.</p>
+<p>The command "ipconfig /renew" is like asking the network to give your device a new address. It tells your computer to request a fresh IP address from the DHCP server, which is responsible for assigning IP addresses on the network. This command is useful when you want to refresh your network connection or resolve connectivity issues by obtaining a new IP address.</p>
 
 <p>**Side note: We may temporarily lose connection to our VM as we are assigned a new IP address from the DHCP server</p>
 
@@ -361,7 +364,7 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 <strong>What is DNS protocol?</strong>
 
-<p>DNS (Domain Name System) is a protocol that translates human-readable domain names, such as www.example.com, into IP addresses, which are the numerical addresses used by computers to identify each other on a network. The DNS protocol is responsible for resolving domain names to their corresponding IP addresses and vice versa. The DNS protocol plays a crucial role in enabling the internet to function by providing a distributed and hierarchical system for domain name resolution. It helps users access websites and other network resources using familiar domain names, without needing to remember and enter the underlying IP addresses.</p>
+<p>DNS (Domain Name System) is a protocol that translates human-readable domain names, such as www.google.com, into IP addresses, which are the numerical addresses used by computers to identify each other on a network. The DNS protocol is responsible for resolving domain names to their corresponding IP addresses and vice versa. The DNS protocol plays a crucial role in enabling the internet to function by providing a distributed and hierarchical system for domain name resolution. It helps users access websites and other network resources using familiar domain names, without needing to remember and enter the underlying IP addresses.</p>
 
 We're going to use the Microsoft Windows VM command-line to find IP addresses of popular sites on the internet and witness the traffic it generates on Wireshark:
 
