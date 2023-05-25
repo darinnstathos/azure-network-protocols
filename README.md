@@ -353,10 +353,8 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 
 3. We can see on Wireshark that some traffic was generated once we requested a new IP address
 
-[[XXX: NEED TO TAKE SCREENSHOT OF THIS CONNECTION __ DONT HAVE A PICTURE YET. NEED TO LOOK AT VIDEO TO SEE IF THEY GOT A NEW IP SHOWN UP ON THEIR WIRESHARK AND MATCHES COMMAND_LINE]]
+<img src="https://i.imgur.com/IfjmIg8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br>
 
@@ -380,12 +378,10 @@ We're going to use the Microsoft Windows VM command-line to find IP addresses of
 
 <p>The "nslookup" command is like a detective tool for finding information about domain names and IP addresses. When you use the "nslookup" command and provide a domain name or IP address, it helps you discover details like the corresponding IP address, domain name ownership, and DNS configurations. It's a useful tool for troubleshooting network issues and checking the status of DNS servers.</p>
 
-3. Within the command-line, we are given Google's IP address and within Wireshark, we see an external IP address communicating with our virtual machine 
+3. Within Wireshark, we see with the source (our VM IP Address) & destination (DNS Server) communicating with each other. We can see all of the information about Google the DNS Server extracted, and Google's IP Address appears in the command-line.
 
-[[XXX: NEED TO TAKE SCREENSHOT OF THIS CONNECTION __ DONT HAVE A PICTURE YET. NEED TO LOOK AT VIDEO TO SEE IF THEY GOT A NEW IP SHOWN UP ON THEIR WIRESHARK AND MATCHES COMMAND_LINE]]
+<img src="https://i.imgur.com/9euDERZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br>
 
