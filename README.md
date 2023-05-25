@@ -32,12 +32,14 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h3>🟢Step 1: Create Resource Group and Virtual Machines: Windows & Linux</h3>
 
 <Strong>What are Resource Groups?</strong>
+
 <p>Resource groups in Microsoft Azure are containers that help manage and organize related Azure resources. They provide a logical grouping for resources, such as virtual machines, storage accounts, and networks, allowing administrators to manage, monitor, and apply policies to the resources collectively.</p>
 
 <Strong>What are Virtual Machines?</Strong>
+
 <p>Virtual machines, in simple terms, are like computers within computers. They are software emulations of physical computers that allow you to run multiple operating systems or applications on a single physical machine. Virtual machines provide flexibility, allowing you to create and use different environments or systems without the need for separate physical hardware.</p>
 
-<u><h4>Creating our Resource Group & Microsoft Windows Virtual Machine</h4></u>
+<h4>Creating our Resource Group & Microsoft Windows Virtual Machine:</h4>
 
 1. Within Microsoft Azure, navigate to 'Resource Groups' via the search bar or quick access icon. Select 'Create Resource Group'
 2. Name the Resource Group: "RG-NSGP" (ResourceGroup--NetworkSecurityGroupsProtocol)
@@ -60,7 +62,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/pcjMUcX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/tuUWdN9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<h4>Creating our Linux Ubuntu Virtual Machine</h4>
+<h4>Creating our Linux Ubuntu Virtual Machine:</h4>
 
 1. Azure > naviagte to 'Virtual Machines' via the search bar or quick access icon. Select 'Create Virtual Machine'
 2. Next to 'Resource Group', we want the Resource Group created previously: "RG-NSGP"
@@ -83,6 +85,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>Both our Windows and Linux Virtual Machines have been created. Now, it’s time to connect to our Windows Virtual Machine using Remote Desktop Connection and hop inside. We want to be able to access our Microsoft Operating System so that we can start observing Network Protocols.</p>
 
 <Strong>What are Public IP Addresses?</Strong>
+
 <p>We are going to be copying the Public IP Addresses of our Virtual Machines in order to get inside of them. Public IP addresses, in simple terms, are unique numerical identifiers assigned to devices connected to the internet. They allow devices to communicate with other devices and services on the internet. Just like a home address helps identify where you live, a public IP address helps identify and locate devices, such as computers or routers, on the internet, enabling them to send and receive data across the global network.</p>
 
 1. Within Azure > Select 'Virtual Machines' > Select 'VM1-Windows' > Copy the Public IP Address
@@ -108,6 +111,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h3>🟢Step 3: Download and Install Wireshark through Windows VM</h3>
 
 <strong>What is Wireshark and why is it useful?</strong>
+
 <p>Wireshark is a protocol analyzer, meaning it captures and analyzes network traffic in real-time. It helps in understanding and diagnosing network-related issues by giving detailed insights/information into the communication happening between devices on the network. Since you can peak into all the traffic coming through, it's useful in identifying problems, troubleshooting network performance, and detecting security vulnerabilities.</p>
 
 1. Inside of our Microsoft Windows VM, navigate to 'Microsoft Edge > Search 'Download Wireshark'
@@ -140,6 +144,7 @@ We will now filter and observe various different network protocols and connect t
 <h4>Part 1: Obersving ICMP Traffic & Ping Command</h4>
 
 <Strong>What is ICMP?</strong>
+
 <p>Inside of Wireshark, we will filter by ICMP. ICMP (Internet Control Message Protocol) is a network protocol that allows devices on a network to send control and error messages to each other. It is primarily used for diagnostic and troubleshooting purposes. ICMP messages include things like ping requests and error notifications, helping to check if a device is reachable, measure network latency, and identify network issues such as unreachable hosts or congested connections. Essentially, ICMP is like a messaging system that helps devices communicate about network conditions and status.</p>
 
 1. Inside Wireshark, we can filter by ICMP by navigating to the search by at the top section, typing ‘ICMP’, and hitting the ‘Enter’ key
@@ -153,6 +158,7 @@ We will now filter and observe various different network protocols and connect t
 <img src="https://i.imgur.com/ZGJtU64.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <p>We need the Private IP address of our Linux Machine</p>
+
 <Strong>What is the purpose in connecting to a private IP address?</strong>
 
 <p>Connecting to a private IP address is typically done within a local network or a private network environment. The purpose of connecting to a private IP address is to access and communicate with devices or services within that network. Private IP addresses are not directly accessible from the internet but are used for internal network communication. By connecting to a private IP address, you can interact with resources such as computers, servers, printers, or other devices within the local network, enabling tasks like file sharing, remote management, or accessing network services within that private network.</p>
@@ -165,6 +171,7 @@ We will now filter and observe various different network protocols and connect t
 6. Navigate back to Microsoft Windows VM command-line (Powershell) > we are going to ping to our Linux VM > Type "ping 10.0.0.5" > we can see data packets being transmitted on Wireshark as our two machines talk to one another via request/reply
 
 <Strong>What does the ping command do?</strong>
+
 <p>In simple terms, the "ping" command is like sending a message to another device on a network to see if it's there and how long it takes for the message to come back. It helps you check if a device is reachable and measure the time it takes for data to travel between your device and the target device. It's like saying "Hey, are you there?" and waiting for a response to know if the device is active and how fast it responds.</p>
 
 <img src="https://i.imgur.com/valueBV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -185,6 +192,7 @@ We will now filter and observe various different network protocols and connect t
 <p>Now that we have pinged successfully to our Linux VM and have observed connectivity to the internet, we will create a never-ending,perpetual ping to our Linux VM. This is so we can later witness Network Security Groups and Firewalls in action.</p>
 
 <strong>What are Network Security Groups in Azure?</strong>
+
 <p>Network Security Groups (NSGs) in Azure are a feature of Azure Networking that provide network traffic filtering and security for virtual networks and subnets. They act as virtual firewalls, allowing you to define inbound and outbound traffic rules based on source IP addresses, destination IP addresses, ports, and protocols.
 
 NSGs help control access to Azure resources by permitting or denying network traffic to and from virtual machines, subnets, or specific IP addresses. They provide an additional layer of security by allowing administrators to enforce network-level security policies, restrict unauthorized access, and protect against malicious activity within the Azure environment.
@@ -230,7 +238,9 @@ Now that we have witnessed what Network Security Groups can do, we will allow fo
 <h3>🟢Step 5: Test Out Various Other Networking Protocols (SSH, DHCP, DNS, RDP)</h3>
 
 <h4>SSH Protocol:</h4>
+
 <strong>What is SSH protocol?</strong>
+
 <p>SSH protocol allows us to access another computer's command-line. SSH (Secure Shell) is a cryptographic network protocol that allows secure remote access and communication between computers. It provides a secure way to log into a remote system over an untrusted network, encrypting the connection and preventing unauthorized access.</p>
 
 <p>SSH is important because it enables secure remote administration, file transfers, and tunneling of other network services. It ensures confidentiality, integrity, and authentication, making it a crucial protocol for secure remote access and management of systems and servers.</p>
