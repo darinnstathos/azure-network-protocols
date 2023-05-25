@@ -310,7 +310,7 @@ We're going to use the Microsoft Windows VM command-line to find IP addresses of
 
 <br>
 
-<h4><u>RDP Protocol:</u></h4>
+<h4>RDP Protocol:</h4>
 
 <strong>What is RDP Protocol?</strong>
 
