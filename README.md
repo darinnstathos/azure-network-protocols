@@ -35,7 +35,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p>Resource groups in Microsoft Azure are containers that help manage and organize related Azure resources. They provide a logical grouping for resources, such as virtual machines, storage accounts, and networks, allowing administrators to manage, monitor, and apply policies to the resources collectively.</p>
 
-<Strong>What are Virtual Machines?</Strong>
+<Strong><u>What are Virtual Machines?</u></Strong>
 
 <p>Virtual machines, in simple terms, are like computers within computers. They are software emulations of physical computers that allow you to run multiple operating systems or applications on a single physical machine. Virtual machines provide flexibility, allowing you to create and use different environments or systems without the need for separate physical hardware.</p>
 
